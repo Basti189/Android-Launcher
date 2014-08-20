@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="de.wolfsline.launcher.MainActivity"
+    android:id="@+id/mainLayout" >
+    
+    <SlidingDrawer 
+        android:id="@+id/drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        
+        android:handle="@+id/handle"
+        android:content="@+id/content" >
+        
+        <ImageView 
+            android:id="@+id/handle"
+            android:background="@drawable/ic_dialog_dialer"
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:paddingTop="10dp"
+        	android:paddingBottom="10dp">
+        </ImageView>
+        
+        <GridView 
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/Black_transparent"
+            android:columnWidth="50dp"
+            android:numColumns="auto_fit"
+            android:verticalSpacing="40dp"
+            android:horizontalSpacing="40dp"
+            android:stretchMode="columnWidth"
+            android:gravity="center" >
+            <!-- columWidht => Beeinflusst icons pro Zeile im Drawer -->
+        </GridView>
+        
+    </SlidingDrawer>
+
+</RelativeLayout>
